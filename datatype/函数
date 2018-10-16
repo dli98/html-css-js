@@ -1,0 +1,48 @@
+（1）function 命令
+function print(s) {
+  console.log(s);
+}
+
+（2）函数表达式
+var print = function(s) {
+  console.log(s);
+};
+
+这种写法将一个匿名函数赋值给变量。这时，这个匿名函数又称函数表达式（Function Expression），因为赋值语句的等号右侧只能放表达式。
+
+（3）Function 构造函数
+var add = new Function(
+  'x',
+  'y',
+  'return x + y'
+);
+如果同一个函数被多次声明，后面的声明就会覆盖前面的声明。
+由于函数名的提升（参见下文），前一次声明在任何时候都是无效的，这一点要特别注意。
+
+f()   //2 
+var f = function () {
+  console.log('1');
+}
+f() //1
+function f() {
+  console.log('2');
+}
+f()  //1
+
+函数的length属性返回函数预期传入的参数个数，即函数定义之中的参数个数。
+function f(a, b) {}
+f.length // 2
+
+函数的toString方法返回一个字符串，内容是函数的源码。
+function f() {
+  a();
+  b();
+  c();
+}
+
+f.toString()
+// function f() {
+//  a();
+//  b();
+//  c();
+// }
