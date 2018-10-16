@@ -25,3 +25,35 @@ line 3
 \' ：单引号（\u0027）
 \" ：双引号（\u0022）
 \\ ：反斜杠（\u005C）
+
+
+
+字符串可以被视为字符数组，因此可以使用数组的方括号运算符，用来返回某个位置的字符（位置编号从0开始）。
+
+但是，字符串与数组的相似性仅此而已。实际上，无法改变字符串之中的单个字符。
+
+length属性返回字符串的长度，该属性也是无法改变的。
+
+JavaScript 使用 Unicode 字符集。JavaScript 引擎内部，所有字符都用 Unicode 表示。
+
+每个字符在 JavaScript 内部都是以16位（即2个字节）的 UTF-16 格式储存。
+也就是说，JavaScript 的单位字符长度固定为16位长度，即2个字节。
+
+
+
+总结一下，对于码点在U+10000到U+10FFFF之间的字符，JavaScript 总是认为它们是两个字符（length属性为2）。所以处理的时候，必须把这一点考虑在内，
+也就是说，JavaScript 返回的字符串长度可能是不正确的。
+
+btoa()：任意值转为 Base64 编码
+atob()：Base64 编码转为原来的值
+
+function b64Encode(str) {
+  return btoa(encodeURIComponent(str));
+}
+
+function b64Decode(str) {
+  return decodeURIComponent(atob(str));
+}
+
+b64Encode('你好') // "JUU0JUJEJUEwJUU1JUE1JUJE"
+b64Decode('JUU0JUJEJUEwJUU1JUE1JUJE') // "你好"
