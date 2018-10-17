@@ -1,0 +1,88 @@
+如果人为设置length大于当前元素个数，则数组的成员数量会增加到这个值，新增的位置都是空位。
+var a = ['a'];
+
+a.length = 3;
+a[1] // undefined
+
+值得注意的是，由于数组本质上是一种对象，所以可以为数组添加属性，但是这不影响length属性的值。
+
+var a = [];
+
+a['p'] = 'abc';
+a.length // 0
+
+a[2.1] = 'abc';
+a.length // 0
+
+for...in不仅会遍历数组所有的数字键，还会遍历非数字键。
+var a = [1, 2, 3];
+a.foo = true;
+
+for (var key in a) {
+  console.log(key);
+}
+// 0
+// 1
+// 2
+// foo
+
+上面代码在遍历数组时，也遍历到了非整数键foo。所以，不推荐使用for...in遍历数组。
+
+数组的遍历可以考虑使用for循环或while循环。
+
+上面代码用delete命令删除了数组的第二个元素，这个位置就形成了空位，但是对length属性没有影响。也就是说，length属性不过滤空位。
+所以，使用length属性进行数组遍历，一定要非常小心。
+
+数组的某个位置是空位，与某个位置是undefined，是不一样的。如果是空位，使用数组的forEach方法、for...in结构、
+以及Object.keys方法进行遍历，空位都会被跳过。
+var a = [, , ,];
+
+a.forEach(function (x, i) {
+  console.log(i + '. ' + x);
+})
+// 不产生任何输出
+
+for (var i in a) {
+  console.log(i);
+}
+// 不产生任何输出
+
+Object.keys(a)
+// []
+这就是说，空位就是数组没有这个元素，所以不会被遍历到，而undefined则表示数组有这个元素，值是undefined，所以遍历不会跳过。
+
+
+数组的slice方法可以将“类似数组的对象”变成真正的数组。
+
+var arr = Array.prototype.slice.call(arrayLike);
+除了转为真正的数组，“类似数组的对象”还有一个办法可以使用数组的方法，就是通过call()把数组的方法放到对象上面。
+function print(value, index) {
+  console.log(index + ' : ' + value);
+}
+
+Array.prototype.forEach.call(arrayLike, print);
+
+面代码中，arrayLike代表一个类似数组的对象，本来是不可以使用数组的forEach()方法的，但是通过call()，
+可以把forEach()嫁接到arrayLike上面调用。
+
+下面的例子就是通过这种方法，在arguments对象上面调用forEach方法。
+// forEach 方法
+function logArgs() {
+  Array.prototype.forEach.call(arguments, function (elem, i) {
+    console.log(i + '. ' + elem);
+  });
+}
+
+// 等同于 for 循环
+function logArgs() {
+  for (var i = 0; i < arguments.length; i++) {
+    console.log(i + '. ' + arguments[i]);
+  }
+}
+
+注意，这种方法比直接使用数组原生的forEach要慢，所以最好还是先将“类似数组的对象”转为真正的数组，然后再直接调用数组的forEach方法。
+var arr = Array.prototype.slice.call('abc');
+arr.forEach(function (chr) {
+  console.log(chr);
+});
+// a
