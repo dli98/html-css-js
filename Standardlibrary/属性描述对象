@@ -77,3 +77,12 @@ Object.defineProperty(obj, 'p', {
 obj.a的writable属性是false。然后，改变obj.a的值，不会有任何效果。
 
 注意，正常模式下，对writable为false的属性赋值不会报错，只会默默失败。但是，严格模式下会报错，即使对a属性重新赋予一个同样的值。
+
+有时需要冻结对象的读写状态，防止对象被改变。JavaScript 提供了三种冻结方法，最弱的一种是Object.preventExtensions，
+其次是Object.seal，最强的是Object.freeze。
+
+Object.preventExtensions方法可以使得一个对象无法再添加新的属性。可删除
+Object.seal方法使得一个对象既无法添加新属性，也无法删除旧属性。
+Object.seal只是禁止新增或删除属性，并不影响修改某个属性的值。
+
+Object.freeze方法可以使得一个对象无法添加新属性、无法删除旧属性、也无法改变属性的值，使得这个对象实际上变成了常量。
