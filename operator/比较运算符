@@ -1,0 +1,69 @@
+JavaScript 一共提供了8个比较运算符。
+
+> 大于运算符
+< 小于运算符
+<= 小于或等于运算符
+>= 大于或等于运算符
+== 相等运算符
+=== 严格相等运算符
+!= 不相等运算符
+!== 严格不相等运算符
+
+（1）原始类型值
+
+如果两个运算子都是原始类型的值，则是先转成数值再比较。
+5 > '4' // true
+// 等同于 5 > Number('4')
+// 即 5 > 4
+
+true > false // true
+// 等同于 Number(true) > Number(false)
+// 即 1 > 0
+
+2 > true // true
+// 等同于 2 > Number(true)
+// 即 2 > 1
+
+1 > NaN // false
+1 <= NaN // false
+'1' > NaN // false
+'1' <= NaN // false
+NaN > NaN // false
+NaN <= NaN // false
+
+（2）对象
+
+如果运算子是对象，会转为原始类型的值，再进行比较。
+
+
+需要注意的是，NaN与任何值都不相等（包括自身）。另外，正0等于负0。
+
+（3）复合类型值
+
+两个复合类型（对象、数组、函数）的数据比较时，不是比较它们的值是否相等，而是比较它们是否指向同一个地址。
+{} === {} // false
+[] === [] // false
+(function () {} === function () {}) // false
+
+
+
+var obj1 = {};
+var obj2 = {};
+
+obj1 > obj2 // false
+obj1 < obj2 // false
+obj1 === obj2 // false
+上面的三个比较，前两个比较的是值，最后一个比较的是地址，所以都返回false。
+
+
+undefined === undefined // true
+null === null // true
+
+undefined和null与其他类型的值比较时，结果都为false，它们互相比较时结果为true。
+false == null // false
+false == undefined // false
+
+0 == null // false
+0 == undefined // false
+
+undefined == null // true
