@@ -1,0 +1,15 @@
+新建正则表达式有两种方法。一种是使用字面量，以斜杠表示开始和结束。
+
+var regex = /xyz/;
+
+
+RegExp.prototype.ignoreCase：返回一个布尔值，表示是否设置了i修饰符。
+RegExp.prototype.global：返回一个布尔值，表示是否设置了g修饰符。
+RegExp.prototype.multiline：返回一个布尔值，表示是否设置了m修饰符。
+
+
+正则实例对象的test方法返回一个布尔值，表示当前模式是否能匹配参数字符串。
+/cat/.test('cats and dogs') // true
+上面代码验证参数字符串之中是否包含cat，结果返回true。
+
+如果正则表达式带有g修饰符，则每一次test方法都从上一次结束的位置开始向后匹配。
