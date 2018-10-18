@@ -1,0 +1,21 @@
+Date实例有一个独特的地方。其他对象求值的时候，都是默认调用.valueOf()方法，但是Date实例求值的时候，默认调用的是toString()方法。
+这导致对Date实例求值，返回的是一个字符串，代表该实例对应的时间。
+var today = new Date();
+
+today
+// "Tue Dec 01 2015 09:34:43 GMT+0800 (CST)"
+
+// 等同于
+today.toString()
+// "Tue Dec 01 2015 09:34:43 GMT+0800 (CST)"
+
+Date.now方法返回当前时间距离时间零点（1970年1月1日 00:00:00 UTC）的毫秒数，相当于 Unix 时间戳乘以1000。
+Date.parse方法用来解析日期字符串，返回该时间距离时间零点（1970年1月1日 00:00:00）的毫秒数。
+
+
+预期为数值的场合，Date实例会自动调用该方法，所以可以用下面的方法计算时间的间隔。
+
+var start = new Date();
+// ...
+var end = new Date();
+var elapsed = end - start;
