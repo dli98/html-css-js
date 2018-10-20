@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素</title>
+    <style type="text/css">
+
+        /*
+            使用伪元素表示元素中的一些特殊位置
+            p中的第一个字符
+        */
+        p:first-letter{
+            color: yellowgreen;
+        }
+        /*p中的第一行*/
+        p:first-line{
+            color: red;
+        }
+
+        /*:
+            before表示元素最前边的部分
+            一般before都需要结合content这个样式一起使用
+            通过content可以向before或after的位置添加一些元素
+        */
+        p:before{
+            content: "我会出现在整个段落的前面";
+            color: blue;
+        }
+
+        p:after{
+            content: "我会出现在整个段落的后面";
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        一盏离愁孤单伫立在窗口 <br>
+        我在门后假装你人还没走<br>
+        旧地如重游月圆更寂寞<br>
+        夜半清醒的烛火不忍苛责我<br>
+        一壶漂泊浪迹天涯难入喉<br>
+        你走之后酒暖回忆思念瘦<br>
+        水向东流时间怎么偷<br>
+        花开就一次成熟我却错过<br>
+        谁再用琵琶弹奏一曲东风破<br>
+        岁月在墙上剥落看见小时候<br>
+
+    </p>
+    <p>
+        犹记得那年我们都还很年幼<br>
+    </p>
+</body>
+</html>

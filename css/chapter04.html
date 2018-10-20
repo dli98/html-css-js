@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素之间的关系</title>
+
+    <style type="text/css">
+        div span{
+            color:greenyellow;
+        }
+        #d1 p > span{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <span>我是div标签中的span</span>
+        <p>
+            <span>我是p标签中的span</span>
+        </p>
+    </div>
+    <span>我是body标签中的span</span>
+
+</body>
+</html>

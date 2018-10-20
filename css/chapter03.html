@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用选择器</title>
+    <style type="text/css">
+        p{
+            color: red;
+        }
+        /*
+         id 选择器
+         - 通过元素的id属性选中唯一的一个元素
+        */
+        #p1{
+            font-size: 20px;
+        }
+        /*
+         类class 选择器
+         - 通过元素的class属性选中一组元素
+         - .class
+        */
+
+        .p2{
+            color: blue;
+            font-size: 20px;
+        }
+        /*多个class 按顺序执行*/
+        .hello{
+            color: black;
+            font-size: 20px;
+        }
+
+
+        /*
+            选择器分组，
+            - 可以同时选中多个选择器对应的元素
+            - 语法：选择器1，选择器2，选择器n{}
+        */
+        #p1,.p2{
+            background-color: yellow;
+        }
+
+
+        /*
+            通配选择器
+            - 选择所有元素
+            - 语法：*{}
+
+        */
+        *{
+            color: brown;
+        }
+
+
+        /*
+            拥有class为p3 span元素设置一个背景颜色
+            复合选择（交集）
+            - 语法：选择器1选择器2选择N{}
+        */
+        span.p3{
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p>锄禾日当午</p>
+    <p id="p1">锄禾日当午</p>
+    <p>锄禾日当午</p>
+    <p>锄禾日当午</p>
+    <p>锄禾日当午</p>
+    <!--
+        class属性可以重复
+        拥有相同class的元素，是一组元素
+        可以同时为一个元素设置多个class元素
+    -->
+    <p class="p2 hello">锄禾日当午</p>
+    <p class="p2">锄禾日当午</p>
+    <p class="p2">锄禾日当午</p>
+    <p class="p2">锄禾日当午</p>
+    <p>锄禾日当午</p>
+    <p>锄禾日当午</p>
+    <p class="p3">锄禾日当午</p>
+    <span class="p3">汗滴禾下土</span>
+</body>
+</html>

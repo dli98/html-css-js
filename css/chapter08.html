@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style type="text/css">
+
+        /*
+            为所有具体title属性的p元素
+            p[titel]{
+            background-color: yellow;
+            }
+        */
+
+        /*
+            title为hello
+             p[title='hello']{
+            background-color: yellow;
+            }
+        */
+
+
+        /*
+            title以ab开头的
+            p[title^='ab']{
+            background-color: yellow;
+            }
+        */
+
+        /*
+            以title结尾的
+        */
+
+        /*p[title$='c']{*/
+            /*background-color: yellow;*/
+        /*}*/
+
+        /*
+            包含指定内容的的元素
+        */
+
+        p[title*='c']{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        title属性
+            当鼠标移入到元素时，元素中的title的内容讲作为提示文字显示
+    -->
+
+    <p title="hello">我是一个段落</p>
+    <p>我是一个段落</p>
+    <p title="bcderc">我是一个段落</p>
+    <p title="abccd">我是一个段落</p>
+    <p title="abc">我是一个段落</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类子类</title>
+    <style type="text/css">
+        /*
+            第一个子元素 同时为p标签
+        */
+        p:first-child{
+            background-color: yellow;
+        }
+        /*
+            最后一个子元素
+        */
+        p:last-child{
+            background-color: yellow;
+        }
+        /*
+            任意位置的子元素
+            指定选择第几个子标签
+                even:偶数
+                odd:奇数
+        */
+        p:nth-child(even){
+            background-color: blue;
+        }
+
+        p:first-of-type{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <span>hello</span>
+    <p>我是p的一个标签</p>
+    <p>我是p的一个标签</p>
+    <p>我是p的一个标签</p>
+    <p>我是p的一个标签</p>
+    <p>我是p的一个标签</p>
+    <p>我是p的一个标签</p>
+</body>
+</html>
