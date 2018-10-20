@@ -1,4 +1,4 @@
-# html-css-notos
+# css-notos
 
 
 - [css基本知识](demo01.html)
@@ -11,6 +11,3 @@
 - [child type](demo09.html)
 
 
-
-## 练习
-- [写一个简单网站](practice01/)
