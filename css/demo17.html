@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .box {
+            width: 100px;
+            height: 100px;
+            /*
+                width height盒子内容区的大小，而不是盒子的整个大小
+                盒子可见框的大小，内边框和边框共同觉得
+            */
+
+            background-color: #bfa;
+
+            /*
+                border-width:边框的宽度
+                    可以指定四个边框的宽度 10px, 20px, 30px, 40px
+                        上 右 左 下
+                    三个值：
+                        上 左右 下
+                    二个值：
+                        上下 左右
+                    一个值：
+                        全部
+                border-color：边框的颜色
+                border-style：边框的样式
+                    solid：实线
+                    dotted：点状边框
+                    dashed：虚线
+                    double：双线
+            */
+            border-width: 10px;
+            border-color: red;
+            /*border-style: solid double dotted dashed ;*/
+            border-style: solid;
+
+            /*
+            border样式 宽度 颜色
+            */
+
+            padding: 50px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

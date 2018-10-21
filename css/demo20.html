@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        span{
+            background-color: #bbffaa;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .s1{
+            /*内联元素设置了width和height无效*/
+            width: 100px;
+            height: 100px;
+
+            /*内边框
+                水平方向
+            */
+            padding-left: 100px;
+            padding-right: 100px;
+            /*
+                垂直方向不影响布局
+            */
+            padding-top: 100px;
+            padding-bottom: 100px;
+
+            /*
+                边框
+            */
+            border: 100px indianred solid;
+
+            margin-right: 100px;
+            margin-left: 100px;
+            /* 外边框*/
+
+            margin-top: 100px;
+            margin-bottom: 100px;
+
+        }
+    </style>
+</head>
+<body>
+    <span class="s1">我是一个span1</span>
+    <span>我是一个span2</span>
+    <span>我是一个span3</span>
+    <span>我是一个span4</span>
+    <span>我是一个span4</span>
+    <span>我是一个span4</span>
+    <span>我是一个span4</span>
+    <div class="box1"></div>
+</body>
+</html>
