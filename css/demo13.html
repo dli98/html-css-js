@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器的优先级</title>
+    <style type="text/css">
+        .p1{
+            background-color: green;
+        }
+
+        p{
+            background-color: blue;
+        }
+
+        #p2{
+            background-color: aqua;
+        }
+        /*
+        #p2{
+            background-color: aqua !important;
+        }
+            !important 最高
+            内联样式，优先级 1000
+            id选择器   100
+            类与伪类    10
+            元素选择器   1
+            通配*       0
+            继承       没有优先级
+
+            当选择中包含多种选择器时，优先级相加
+            但是优先级计算不会超过最大数量级
+            优先级一样，谁在后面用谁
+
+            并集选择器的优先级单独计算
+        */
+        .p1{
+            color: blue;
+        }
+        .p3{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <p class="p1 p3" id="p2">
+        我是一个段落
+        <span>我是span</span>
+    </p>
+</body>
+</html>
