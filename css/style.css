@@ -16,3 +16,12 @@ p{
     color:blue;
     font-size: 40px;
 }
+
+
+.box2{
+    width: 1024px;
+    height: 768px;
+    margin: 0px auto;
+    background-color: pink;
+    background-image: url("L.jpg");
+}

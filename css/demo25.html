@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        /*
+            position
+                static：默认值，元素没有开启定位
+                relative：
+                    不设置偏移量，没有任何变化
+                    相对定位，元素不会脱离文档流
+                    提高元素一个层级
+                    不改变元素的性质：块还是块，内联还是内联
+                absolute：绝对定位
+                fixed：固定定位（绝对定位的一种）
+        */
+
+        /*
+            left right top bottom 偏移量
+        */
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: relative;
+            top: 200px;
+            left: 200px;
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

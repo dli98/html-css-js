@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /*统一页面中的字体*/
+        body{
+            font: 12px/1 宋体;
+        }
+        .outer{
+            width: 300px;
+            height: 473px;
+            background-color: #bbffaa;
+            margin: 50px auto;
+        }
+        .title{
+            border: 2px #019e8b solid;
+            height: 36px;
+            background-color: white;
+            /*设置title行高*/
+            line-height: 36px;
+            padding: 0px 22px 0px 16px;
+        }
+        .title a{
+            float: right;
+            color: red;
+
+        }
+
+        .content{
+            border: 1px solid #deddd9;
+            padding: 0px 28px 0px;
+        }
+
+        .content a{
+            color: black;
+            text-decoration: none;
+        }
+
+        .content ul:not(.no-border){
+            list-style: none;
+            /*为ul设置下边框*/
+            border-bottom: 1px dashed #deddd9;
+        }
+
+        .content .right{
+            float: right;
+        }
+
+        .content h3{
+            margin-top: 14px;
+            margin-bottom: 14px;
+        }
+
+        .content li{
+            margin-bottom: 14px;
+        }
+
+        a:hover{
+            color: red;
+            /*添加下划线*/
+            text-decoration: underline ;
+        }
+    </style>
+</head>
+<body>
+    <!--外层div-->
+    <div class="outer">
+
+        <div class="title">
+            <a href="#">面授开班计划</a>
+            <h3>近期开班</h3>
+        </div>
+        <div class="content">
+            <h3><a href="#">JavaEE+云计算-全程就业班</a></h3>
+            <ul>
+                <li>
+                    <a href="#">开班时间：2018</a>
+                    <a class="right" href="#">预约报名</a>
+                </li>
+                <li>
+                    <a href="#">开班时间：2018</a>
+                    <a class="right" href="#">无座，名额爆满</a>
+                </li>
+                <li>
+                    <a href="#">开班时间：2018</a>
+                    <a class="right" href="#">开班盛况</a>
+                </li>
+                <li>
+                    <a href="#">开班时间：2018</a>
+                    <a class="right" href="#">开班盛况</a>
+                </li>
+                <li>
+                    <a href="#">开班时间：2018</a>
+                    <a class="right" href="#">开班盛况</a>
+                </li>
+            </ul>
+
+             <h3><a href="#">Android</a></h3>
+            <ul>
+                <li>
+                    <a href="#">开班时间：2018</a>
+                    <a class="right" href="#">预约报名</a>
+                </li>
+                <li>
+                    <a href="#">开班时间：2018</a>
+                    <a class="right" href="#">开班盛况</a>
+                </li>
+                <li>
+                    <a href="#">开班时间：2018</a>
+                    <a class="right" href="#">开班盛况</a>
+                </li>
+                <li>
+                    <a href="#">开班时间：2018</a>
+                    <a class="right" href="#">开班盛况</a>
+                </li>
+            </ul>
+
+             <h3><a href="#">前端</a></h3>
+            <ul class="no-border">
+                <li>
+                    <a href="#">开班时间：2018</a>
+                    <a class="right" href="#">预约报名</a>
+                </li>
+                <li>
+                    <a href="#">开班时间：2018</a>
+                    <a class="right" href="#">开班盛况</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
