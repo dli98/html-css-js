@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+        表单的内容用来提交给服务器的
+        提交到action属性的地址
+        如果希望表单的类容提交到服务器中，还必须提供一个name
+
+        用户填写的信息会附在url地址后面以查询字符串的形式发送给服务器
+            url地址？查询字符串
+        格式：键值对
+    -->
+    <form action="target.html">
+
+        <!--文本框-->
+        <!--
+            表单提示文字label
+            for属性，指定一个单项的id值
+        -->
+        <fieldset>
+            <!--
+                fieldset对表单项进行分组
+            -->
+            <legend>用户信息</legend>
+            <label for="um">用户名</label>
+            <!--<input id="um" type="text" name="username" value="用户名-默认值"><br><br>-->
+            <input id="um" type="text" name="username" placeholder="用户名"><br><br>
+            <!--用户名<input type="text" name="username" value="用户名-默认值"><br><br>-->
+            <label for="pwd">密码</label>
+            <input id="pwd" type="password" name="psd"><br> <br>
+        </fieldset>
+        <!--
+            单选按钮
+            name属性相同为一组
+            必须指定一个value属性，最终提交给服务器
+            单选或多选指定默认选项
+                checked
+        -->
+        性部<input type="radio" name="gender" value="male" checked>男
+            <input type="radio" name="gender" value="female">女 <br><br>
+
+        <!--
+            多选框
+                checkout
+        -->
+        爱好<input type="checkbox" name="hobby" value="zq">足球
+            <input type="checkbox" name="hobby" value="lq" checked>篮球
+            <input type="checkbox" name="hobby" value="ymq" checked>羽毛球
+            <input type="checkbox" name="hobby" value="ppq">兵乓球
+            <input type="checkbox" name="hobby" value="wq">网球
+        <br><br>
+        <!--
+            下拉列表
+            当为select添加multiple，下拉列表变成一个多选下拉列表
+        -->
+        你喜欢的明星
+            <select name="star">
+                <!--
+                    optgroup进行分组
+                -->
+                <optgroup label="男明星">
+                    <option value="胡歌">胡歌</option>
+                    <option value="大忽悠">大忽悠</option>
+                    <option value="职业法师">许思聪</option>
+                    <option value="天王" selected>刘德华</option>
+                </optgroup>
+                <optgroup label="女明星">
+                    <option value="胡歌">范八万</option>
+                    <option value="大忽悠">赵丽颖</option>
+                </optgroup>
+            </select>
+        <br><br>
+        <!--多行文本框-->
+        自我介绍 <textarea name="info"></textarea>
+
+        <!--
+            重置按钮
+        -->
+        <br><br>
+        <input type="reset">
+        <input type="button" value="按钮">
+        <!--
+            button创建按钮
+        -->
+        <input type="submit" value="注册">
+        <br><br>
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+        <button type="button">按钮</button>
+
+    </form>
+</body>
+</html>

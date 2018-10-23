@@ -9,8 +9,12 @@
 - [内联框架](demo06.html)
 - [超链接](demo07.html)
 - [列表](demo08.html)
+- [表格](demo09.html)
+- [长表格](demo10.html)
+- [表单](demo11.html)
+- [框架集](demo12.html)
 
 
 
 ## 练习
-- [写一个简单网站](practice01/)
+- [写一个简单网站](practice01.html)
