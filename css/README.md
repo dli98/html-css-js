@@ -29,9 +29,11 @@
 - [固定定位](demo27.html)
 - [透明opacity](demo28.html)
 - [背景](demo29.html)
+- [clearfix](demo30.html)
+- [css hack](demo31.html)
 
 ## 练习
-- [简单布局](practice01/)
-- [导航条](practice02/)
-- [float](practice03/)
-- [导航条背景](practice04/)
+- [简单布局](practice01.html)
+- [导航条](practice02.html)
+- [float](practice03.html)
+- [导航条背景](practice04.html)

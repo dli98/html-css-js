@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+        body{
+            background-color: green;
+            /*假设IE6需要设置为黄色*/
+            /*样式添加下划线，则只有IE6一下的浏览器才能识别*/
+            _background-color: yellow;
+            /*IE7*/
+            *background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        css hack 特殊代码
+    -->
+    <!--[if IE]>
+        <p>为了您和家人的健康，请远离IE6</p>
+    <![endif]-->
+
+</body>
+</html>

@@ -5,16 +5,55 @@
     <title>Title</title>
     <style type="text/css">
         .box1{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            /*padding-top: 1px;*/
+        }
+
+        /*
+            阻止父子元素的重叠   外边距重叠
+            1.添加table
+            2.padding
+            3
+        */
+        /*.box1:before{*/
+            /*content: '';*/
+            /*display: table;*/
+        /*}*/
+        .box2{
             width: 200px;
             height: 200px;
-            background-color: red;
+            background-color: yellow;
+            margin-top: 100px;
+        }
+
+        .box3{
+            border: 10px red solid;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: #6495ED;
+            float: left;
+        }
+        /*既可以解决高度塌陷，又可以确保父元素和子元素的垂直外边距不会重叠*/
+        .clearfix:before,
+        .clearfix:after{
+            content: '';
+            display: table;
+            clear: both;
         }
     </style>
 </head>
 <body>
-    <div class="box1"></div>
-    <a href="http://www.baidu.com">
-        <img src="小天使.jpeg" alt="小天使">
-    </a>
+
+    <div class="box3 clearfix">
+        <div class="box4"></div>
+    </div>
+    <div class="box1 clearfix">
+        <!--<table></table>-->
+        <div class="box2"></div>
+    </div>
 </body>
 </html>
