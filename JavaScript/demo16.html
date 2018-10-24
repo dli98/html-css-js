@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        alert(history.length);
+        window.onload = function () {
+            var btn = document.getElementById('btn')
+            btn.onclick = function () {
+                /*
+                * 结合test01, 02
+                * back()回退到上一个页面
+                * */
+                history.back()
+            };
+
+            var btn1 = document.getElementById('btn1')
+            btn1.onclick = function () {
+                /*
+                * 结合test01, 02
+                * back()回退到上一个页面
+                * */
+                history.forward()
+            };
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">回退</button>
+    <h1>History</h1>
+    <button id="btn1">前进</button>
+</body>
+</html>

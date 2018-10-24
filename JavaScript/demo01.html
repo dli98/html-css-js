@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        alert('这是我的第一行JS代码')
+//        弹出一个内容
+        function fun() {
+//            向控制台输出信息
+            console.log(this)
+        }
+        fun()
+//      函数：函数形式调用this是window
+//      方法：this就是调用这个方法的对象
+        var obj ={
+            name:'孙悟空',
+            sayName:fun
+        }
+        obj.sayName()
+
+//      往body中写内容
+        document.write('hello')
+    </script>
+</head>
+<body>
+
+</body>
+</html>

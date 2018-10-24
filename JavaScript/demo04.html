@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--<button id="btn1" onclick="alert('讨厌')">我是单击按钮</button>-->
+    <!--<button id="btn2" ondblclick="alert('讨厌')">我是双击按钮</button>-->
+    <!--<button id="btn3" onmousemove="alert('讨厌')">鼠标移入</button>-->
+    <!--耦合性太高，不易修改-->
+    <button id="btn1">单击按钮</button>
+    <script type="text/javascript">
+//
+//       事件，就是用户和浏览器交互行为
+//        绑定处理函数的形式响应事件
+        var btn = document.getElementById("btn1")
+        btn.onclick = function () {
+            alert('你还点')
+        }
+    </script>
+</body>
+</html>

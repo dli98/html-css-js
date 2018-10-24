@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--写在这里，页面还没有加载-->
+    <!--<script type="text/javascript">-->
+        <!--var btn = document.getElementById("btn")-->
+        <!--btn.onclick = function () {-->
+            <!--alert('hello')-->
+        <!--}-->
+    <!--</script>-->
+
+    <!--
+        onload事件会在整个页面加载完成之后才触发
+            这样可以确保我们的代码执行时所有的DOM对象已经加载完毕了
+    -->
+    <script type="text/javascript">
+        window.onload = function () {
+            var btn = document.getElementById("btn")
+            btn.onclick = function () {
+                alert('hello')
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">点我一下</button>
+    <!--<script type="text/javascript">-->
+            <!--var btn = document.getElementById("btn")-->
+            <!--btn.onclick = function () {-->
+                <!--alert('hello')-->
+            <!--}-->
+    <!--</script>-->
+
+</body>
+</html>

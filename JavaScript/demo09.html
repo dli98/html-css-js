@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var u1 = document.getElementById('u1');
+
+            var btn01 = document.getElementById("btn01");
+            btn01.onclick = function () {
+                var li = document.createElement("li");
+                li.innerHTML = "<a href='javascript:' class='link'>新建超链接</a>";
+                u1.appendChild(li)
+            };
+            var allA = document.getElementsByTagName("a");
+            for(var i=0; i<allA.length; i++){
+                allA[i].onclick =function () {
+                    alert('我是一个超链接');
+                };
+            }
+            /*
+            *  事件委派是利用了事件的冒泡，通过委派减少绑定次数
+            * */
+            u1.onclick =function (event) {
+                event = event || window.event;
+            /*
+            *  target表示触发事件的对象
+            *  class有多个时会有隐患
+            * */
+                if(event.target.className == 'link'){
+                    alert('我是ul单击响应')
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn01">添加超链接</button>
+    <ul id="u1">
+        <li><a href="javascript:" class="link">超链接一</a></li>
+        <li><a href="javascript:" class="link">超链接二</a></li>
+        <li><a href="javascript:" class="link">超链接三</a></li>
+    </ul>
+</body>
+</html>
